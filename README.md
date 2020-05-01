@@ -14,4 +14,4 @@
     docker-compose up -d --build
     ```
 2. Open http://localhost:8000/ in your browser. You should see the following page.
-    ![Hello, World!](docs/screenshots/hello_world.png "Hello, World!")
+    ![Hello, World!](media/hello_world.png "Hello, World!")
