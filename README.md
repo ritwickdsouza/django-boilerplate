@@ -1,4 +1,5 @@
 # django-boilerplate
+[![Build Status](https://travis-ci.org/ritwickdsouza/django-boilerplate.svg?branch=master)](https://travis-ci.org/ritwickdsouza/django-boilerplate)
 
 ## Features
 * Django 3.0.5
