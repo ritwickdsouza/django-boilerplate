@@ -1,0 +1,13 @@
+os: linux
+dist: xenial
+language: python
+python:
+  - 3.7.1
+services:
+  - docker
+script:
+  - docker-compose up -d --build
+  - sleep 5  # TODO: Find better way
+  - curl -Is http://127.0.0.1:8000 | head -n 1  # Health check
+notifications:
+  email: false
