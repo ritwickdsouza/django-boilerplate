@@ -1,0 +1,15 @@
+update: all
+pin: True
+branch: master
+schedule: "every day"
+search: True
+requirements:
+  - \{\{cookiecutter.repository_name\}\}/requirements.txt:
+      update: all
+      pin: True
+
+assignees:
+ - ritwickdsouza
+
+branch_prefix: pyup/
+close_prs: True
