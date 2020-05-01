@@ -5,7 +5,7 @@ services:
       build:
         dockerfile: Dockerfile
         context: .
-      container_name: backend
+      container_name: django_boilerplate
       depends_on:
         - db
       env_file: env/backend.env
