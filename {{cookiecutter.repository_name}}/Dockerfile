@@ -16,5 +16,5 @@ ADD . /home/user/app
 
 USER user
 
-CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn django_boilerplate.wsgi -b 0.0.0.0:8000 --reload"]
+CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn {{cookiecutter.project_slug}}.wsgi -b 0.0.0.0:8000 --reload"]
 

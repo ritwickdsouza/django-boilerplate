@@ -5,7 +5,7 @@ services:
       build:
         dockerfile: Dockerfile
         context: .
-      container_name: django_boilerplate
+      container_name: {{cookiecutter.project_slug}}
       depends_on:
         - db
       env_file: env/backend.env

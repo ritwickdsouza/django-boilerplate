@@ -5,6 +5,10 @@ python:
   - 3.7.1
 services:
   - docker
+install:
+  - pip install cookiecutter
+  - cookiecutter . --no-input
+  - cd django-project
 script:
   - docker-compose up -d --build
   - sleep 5  # TODO: Find better way
