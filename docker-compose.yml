@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+      build:
+        dockerfile: Dockerfile
+        context: .
+      container_name: backend
+      env_file: .env
+      expose:
+        - 8000
+      volumes:
+        - ./:/home/user/app
+  nginx:
+    container_name: nginx
+    depends_on:
+      - backend
+    image: nginx:1.17.10
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/home/user/app
+      - ./nginx:/etc/nginx/conf.d
