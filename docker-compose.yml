@@ -6,11 +6,19 @@ services:
         dockerfile: Dockerfile
         context: .
       container_name: backend
-      env_file: .env
+      depends_on:
+        - db
+      env_file: env/backend.env
       expose:
         - 8000
       volumes:
         - ./:/home/user/app
+  db:
+    container_name: postgres
+    env_file: env/postgres.env
+    image: postgres:12.2-alpine
+    volumes:
+      - .db:/var/lib/postgresql/data
   nginx:
     container_name: nginx
     depends_on:
