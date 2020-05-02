@@ -29,5 +29,5 @@
     ```
     > docker-compose up -d --build
     ```
-5. Open http://localhost:8000/ in your browser. You should see the following page.
-    ![Hello, World!](media/hello_world.png "Hello, World!")
+5. Your application is now running on port 8000. Open http://localhost:8000/admin in your browser and you should see the django admin page
+    ![Django Administration](media/admin.png "Django Administration")
