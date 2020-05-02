@@ -16,4 +16,4 @@ ADD . /home/user/app
 
 USER user
 
-CMD ["sh", "-c", "gunicorn {{cookiecutter.project_slug}}.wsgi -b 0.0.0.0:8000 --reload"]
+CMD ["sh", "-c", "gunicorn {{cookiecutter.project_slug}}.wsgi -b 0.0.0.0:8000"]

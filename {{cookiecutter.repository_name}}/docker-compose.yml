@@ -5,6 +5,9 @@ services:
       build:
         dockerfile: Dockerfile
         context: .
+      command: bash -c "./manage.py collectstatic --no-input &&
+                        ./manage.py migrate &&
+                        gunicorn {{cookiecutter.project_slug}}.wsgi -b 0.0.0.0:8000 --reload"
       container_name: {{cookiecutter.project_slug}}
       depends_on:
         - db

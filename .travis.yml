@@ -11,8 +11,6 @@ install:
   - cd django-project
 script:
   - docker-compose up -d --build
-  - make django-collectstatic
-  - make django-migrate
   - sleep 5  # TODO: Find better way
   - curl -Is http://127.0.0.1:8000/check.txt | head -n 1  # Health check
 notifications:
