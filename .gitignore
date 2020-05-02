@@ -136,3 +136,5 @@ dmypy.json
 # Mac
 .DS_Store
 
+# Default cookiecutter
+django-project/
