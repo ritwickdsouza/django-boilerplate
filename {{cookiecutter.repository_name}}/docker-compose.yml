@@ -27,5 +27,5 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./:/home/user/app
+      - ./:/home/user/app/
       - ./nginx:/etc/nginx/conf.d
